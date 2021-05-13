@@ -1,3 +1,8 @@
 'use strict';
 
-import topMenuScroll from './modules/topMenuScroll';
+import smoothScroll from './modules/smoothScroll';
+import slides from './modules/slides';
+
+
+smoothScroll();
+slides();

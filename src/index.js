@@ -1,7 +1,7 @@
 'use strict';
 
 import smoothScroll from './modules/smoothScroll';
-import slides from './modules/slides';
+import slider from './modules/slider';
 import modalMenu from './modules/modalMenu';
 
 
@@ -11,4 +11,4 @@ smoothScroll();
 // Модальное окно
 modalMenu();
 
-slides();
+slider();

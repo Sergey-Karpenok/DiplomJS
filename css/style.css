@@ -941,7 +941,7 @@ hr.white {
     }
     h1.big,
     .title-h1.big {
-        font-size: 80px;
+        font-size: 60px;
         line-height: 1;
         margin-bottom: 50px;
     }
@@ -1071,7 +1071,7 @@ video#video_background {
     }
     .top-slider .table {
         opacity: 0;
-        visibility: hidden;
+        visibility: none;
         -webkit-transform: scale(1.5);
         -ms-transform: scale(1.5);
         -o-transform: scale(1.5);

@@ -1,8 +1,16 @@
 {
-    "name": "Diplom",
+    "name": "DiplomJS",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "webpack.dev.config.js",
+    "dependencies": {},
+    "devDependencies": {
+        "@babel/core": "^7.14.2",
+        "@babel/preset-env": "^7.14.2",
+        "babel-loader": "^8.2.2",
+        "webpack": "^5.37.0",
+        "webpack-cli": "^4.7.0"
+    },
     "scripts": {
         "build": "webpack --config webpack.prod.config.js",
         "dev": "webpack serve --config webpack.dev.config.js"
@@ -17,13 +25,5 @@
     "bugs": {
         "url": "https://github.com/Sergey-Karpenok/DiplomJS/issues"
     },
-    "homepage": "https://github.com/Sergey-Karpenok/DiplomJS#readme",
-    "devDependencies": {
-        "@babel/core": "^7.14.2",
-        "@babel/preset-env": "^7.14.2",
-        "babel-loader": "^8.2.2",
-        "webpack": "^5.37.0",
-        "webpack-cli": "^4.7.0",
-        "webpack-dev-server": "^3.11.2"
-    }
+    "homepage": "https://github.com/Sergey-Karpenok/DiplomJS#readme"
 }

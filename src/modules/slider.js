@@ -1,6 +1,6 @@
 const slider = () => {
 
-    const slider = document.querySelector('.top-slider'),
+    const table = document.querySelectorAll('.table'),
         slide = document.querySelectorAll('.item');
 
     let currentSlide = 0,
@@ -17,11 +17,13 @@ const slider = () => {
     const autoPlaySlide = () => {
 
         prevSlide(slide, currentSlide, 'item-active');
+        prevSlide(table, currentSlide, 'active');
         currentSlide++;
         if (currentSlide >= slide.length) {
             currentSlide = 0;
         }
         nextSlide(slide, currentSlide, 'item-active');
+        nextSlide(table, currentSlide, 'active');
     };
 
     const startSlide = (time = 3000) => {

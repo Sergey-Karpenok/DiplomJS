@@ -1228,6 +1228,20 @@ video#video_background {
 
 /**** services section *****/
 
+.services-elements {
+    overflow: hidden;
+}
+
+.services-carousel {
+    display: flex;
+    transition: transform 0.5s;
+    will-change: transform;
+}
+
+.services-slide {
+    flex: 0 0 33%;
+}
+
 .services-arrow {
     display: flex;
     justify-content: center;

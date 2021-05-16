@@ -13,7 +13,7 @@ smoothScroll();
 modalMenu();
 
 // Главный слайдер
-// slider();
+slider();
 
 // Слайдер карусель
 carousel();

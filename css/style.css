@@ -1417,6 +1417,10 @@ video#video_background {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.up-hiden {
+    display: none;
+}
+
 @media only screen and (min-width: 992px) {
     .services-elements>.row>hr:nth-of-type(2n) {
         clear: none;

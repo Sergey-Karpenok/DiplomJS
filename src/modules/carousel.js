@@ -1,34 +1,46 @@
 const carousel = () => {
 
     const servicesSlide = document.querySelectorAll('.services-slide'),
+        servicesCarousel = document.querySelector('.services-carousel'),
         arrowLeft = document.querySelector('.arrow-left'),
-        arrowRight = document.querySelector('.arrow-right');
+        arrowRight = document.querySelector('.arrow-right'),
+        modalOvelay = document.querySelector('.modal-overlay'),
+        modalCallback = document.querySelector('.modal-callback'),
+        absolute = document.querySelectorAll('.absolute');
 
 
     let position = 0;
 
     const controlSlider = () => {
         arrowLeft.addEventListener('click', () => {
-            --position;
-            console.log('position: ', position);
+            prevSlide();
         })
         arrowRight.addEventListener('click', () => {
-            ++position;
-            console.log('position: ', position);
+            nextSlide();
         })
     };
     controlSlider();
 
-    // const prevSlide = () => {
-    //     --position;
-    //     console.log('position: ', position);
+    const prevSlide = () => {
+        --position;
+        if (position >= 0) {
+            servicesCarousel.style.transform = `translateX(-${position * 33}%)`
+        } else position = 0;
+    };
 
-    // };
-    // const nextSlide = () => {
-    //     ++position;
-    //     console.log('position: ', position);
+    const nextSlide = () => {
+        ++position;
+        if (position <= 3) {
+            servicesCarousel.style.transform = `translateX(-${position * 33}%)`
+        } else position = 3;
+    };
 
-    // };
+    absolute.forEach((item) => {
+        item.addEventListener('click', () => {
+            modalOvelay.style.display = 'block';
+            modalCallback.style.display = 'block';
+        })
+    });
 
 };
 

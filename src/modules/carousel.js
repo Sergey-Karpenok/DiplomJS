@@ -11,16 +11,6 @@ const carousel = () => {
 
     let position = 0;
 
-    const controlSlider = () => {
-        arrowLeft.addEventListener('click', () => {
-            prevSlide();
-        })
-        arrowRight.addEventListener('click', () => {
-            nextSlide();
-        })
-    };
-    controlSlider();
-
     const prevSlide = () => {
         --position;
         if (position >= 0) {
@@ -34,6 +24,13 @@ const carousel = () => {
             servicesCarousel.style.transform = `translateX(-${position * 33}%)`
         } else position = 3;
     };
+
+    const controlSlider = () => {
+        arrowLeft.addEventListener('click', prevSlide)
+        arrowRight.addEventListener('click', nextSlide)
+    };
+    controlSlider();
+
 
     absolute.forEach((item) => {
         item.addEventListener('click', () => {

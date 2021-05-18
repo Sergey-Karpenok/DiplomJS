@@ -6,6 +6,7 @@ import modalMenu from './modules/modalMenu';
 import carousel from './modules/carousel';
 import accordeon from './modules/accordeon';
 import scrollToTop from './modules/scrollToTop';
+import sendForm from './modules/sendForm';
 
 
 // Плавная прокрутка
@@ -25,3 +26,6 @@ accordeon();
 
 // Плавная прокрутка наверх
 scrollToTop();
+
+// Отправка формы
+sendForm();

@@ -4,7 +4,9 @@ const sendForm = () => {
         errorMessage = 'Что-то пошло не так...',
         loadMessage = 'Загрузка...',
         sucsessMesage = `Заявка отправлена, мы скоро с вами свяжемся`,
-        statusMessage = document.createElement('div');
+        statusMessage = document.createElement('div'),
+        modalOvelay = document.querySelector('.modal-overlay'),
+        modalCallback = document.querySelector('.modal-callback');
 
     statusMessage.textContent = 'Все в порядке';
     statusMessage.style.cssText = `font-size: 2rem; color: green`;
@@ -25,7 +27,11 @@ const sendForm = () => {
                     throw new Error('Ошибка статус не равен 200');
                 }
                 statusMessage.textContent = sucsessMesage;
-                setTimeout(() => statusMessage.remove(), 3000)
+                setTimeout(() => {
+                    statusMessage.remove()
+                    modalOvelay.style.display = 'none';
+                    modalCallback.style.display = 'none';
+                }, 3000)
             })
             .catch((error) => {
                 statusMessage.textContent = errorMessage;

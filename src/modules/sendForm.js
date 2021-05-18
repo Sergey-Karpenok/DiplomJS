@@ -14,8 +14,12 @@ const sendForm = () => {
         callbackForm.appendChild(statusMessage);
         statusMessage.textContent = loadMessage;
         const formData = new FormData(callbackForm);
+        let body = {};
+        formData.forEach((val, key) => {
+            body[key] = val;
+        });
 
-        postData(formData)
+        postData(body)
             .then((response) => {
                 if (response.status !== 200) {
                     throw new Error('Ошибка статус не равен 200');
@@ -44,7 +48,7 @@ const sendForm = () => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: data
+            body: JSON.stringify(data)
         });
     };
 

@@ -7,6 +7,7 @@ import carousel from './modules/carousel';
 import accordeon from './modules/accordeon';
 import scrollToTop from './modules/scrollToTop';
 import sendForm from './modules/sendForm';
+import validate from './modules/validate';
 
 
 // Плавная прокрутка
@@ -29,3 +30,6 @@ scrollToTop();
 
 // Отправка формы
 sendForm();
+
+// Валидация формы
+validate();

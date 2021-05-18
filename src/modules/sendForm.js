@@ -3,7 +3,7 @@ const sendForm = () => {
     const callbackForm = document.getElementById('callback-form'),
         errorMessage = 'Что-то пошло не так...',
         loadMessage = 'Загрузка...',
-        sucsessMesage = 'Заявка отправлена, спасибо мы скоро с&nbspвами свяжемся',
+        sucsessMesage = `Заявка отправлена, мы скоро с вами свяжемся`,
         statusMessage = document.createElement('div');
 
     statusMessage.textContent = 'Все в порядке';
@@ -14,7 +14,6 @@ const sendForm = () => {
         callbackForm.appendChild(statusMessage);
         statusMessage.textContent = loadMessage;
         const formData = new FormData(callbackForm);
-        console.log('formData: ', formData);
 
         postData(formData)
             .then((response) => {
@@ -37,9 +36,6 @@ const sendForm = () => {
         };
 
     });
-
-
-
 
 
     const postData = (data) => {

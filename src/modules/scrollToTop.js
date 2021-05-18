@@ -1,6 +1,9 @@
 const scrollToTop = () => {
 
-    const goTopBtn = document.querySelector('.up');
+    const goTopBtn = document.querySelector('.up'),
+        headerPanel = document.querySelector('.top-slider');
+    console.log('headerPanel: ', headerPanel);
+
 
     const trackScroll = () => {
         const scrolled = window.pageYOffset,
@@ -15,10 +18,10 @@ const scrollToTop = () => {
     };
 
     const backToTop = () => {
-        if (window.pageYOffset > 0) {
-            window.scrollBy(0, -80);
-            setTimeout(backToTop, 50);
-        }
+        headerPanel.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     };
 
     window.addEventListener('scroll', trackScroll);
